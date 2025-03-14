@@ -67,22 +67,14 @@ html_css_files = [
         "footer.css",
 ]
 html_theme_options = {
-<<<<<<< HEAD
     "source_repository": "https://github.com/brucekomike/furo-embeded",
-=======
-    "source_repository": "https://github.com/brucekomike/furo-temp",
->>>>>>> 4064c03 (init)
     "source_branch": "main",
     "source_directory": "source/",
     "navigation_with_keys": True,
 }
 highlight_language = 'text'
 #html_logo = '_static/logo.svg'
-<<<<<<< HEAD
 ogp_site_url = 'https://brucekomike.github.io/furo-embeded/'
-=======
-ogp_site_url = 'https://brucekomike.github.io/furo-temp'
->>>>>>> 4064c03 (init)
 #ogp_image = '_static/logo.svg'
 #ogp_image_alt = 'site logo'
 ogp_site_name = 'furo template'
