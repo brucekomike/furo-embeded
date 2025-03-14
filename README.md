@@ -2,7 +2,7 @@
 # furo template
 a simple sphinx template with furo theme and github actions.
 ## quick start
-download [zip file](https://github.com/brucekomike/furo-temp/archive/refs/heads/main.zip) or dirrect start from this template
+download [zip file](https://github.com/brucekomike/furo-embeded/archive/refs/heads/main.zip) or dirrect start from this template
 
 ## steps to fit this template to your needs.
 - most source file is located at `source` folder.

@@ -69,7 +69,7 @@ html_css_files = [
 html_theme_options = {
     "source_repository": "https://github.com/brucekomike/furo-embeded",
     "source_branch": "main",
-    "source_directory": "source/",
+    "source_directory": "docs/source/",
     "navigation_with_keys": True,
 }
 highlight_language = 'text'
