@@ -2,7 +2,7 @@
 hide-toc: true
 ---
 
-```{include} ../README.md
+```{include} ../../README.md
 :start-after: <!-- start elevator-pitch -->
 :end-before: <!-- end elevator-pitch -->
 ```

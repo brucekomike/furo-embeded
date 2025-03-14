@@ -16,5 +16,6 @@ download [zip file](https://github.com/brucekomike/furo-temp/archive/refs/heads/
 
 ## resources
 - [furo docs](https://pradyunsg.me/furo/)
-- [sphinx docs](https://www.sphinx-doc.org/en/master/index.html)
+- [MyST docs](https://myst-parser.readthedocs.io/)
+- [sphinx docs](https://www.sphinx-doc.org/)
 <!-- end elevator-pitch -->
