@@ -9,7 +9,7 @@
 project = 'template-intergrated'
 copyright = '2025, brucekomike'
 author = 'brucekomike'
-release = 'v0.1.0'
+release = 'v0.2.0'
 language='en'
 # 'en' 'jp' 'zh_CN'
 
@@ -45,10 +45,11 @@ source_suffix = {
 }
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'Makefile', 
-  '.gitignore', '.gitattributes', '.git',
+exclude_patterns = ['_build', 'build', 'Thumbs.db',  
+  '.gitignore', '.gitattributes', '.git', 'Makefile', 
   '*.py', '*.bat', '*.sh', 'LICENSE'
   'requirements.txt', '*venv', 
+  '.DS_Store', '._*',
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -62,14 +63,14 @@ html_css_files = [
         "footer.css",
 ]
 html_theme_options = {
-    "source_repository": "https://github.com/brucekomike/furo-temp",
+    "source_repository": "https://github.com/brucekomike/furo-embeded",
     "source_branch": "main",
     "source_directory": "source/",
     "navigation_with_keys": True,
 }
 highlight_language = 'text'
 #html_logo = '_static/logo.svg'
-ogp_site_url = 'https://brucekomike.github.io/furo-temp'
+ogp_site_url = 'https://brucekomike.github.io/furo-embeded/'
 #ogp_image = '_static/logo.svg'
 #ogp_image_alt = 'site logo'
 ogp_site_name = 'furo template'
