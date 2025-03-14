@@ -9,11 +9,7 @@
 project = 'template-intergrated'
 copyright = '2025, brucekomike'
 author = 'brucekomike'
-<<<<<<< HEAD
 release = 'v0.2.0'
-=======
-release = 'v0.1.0'
->>>>>>> 4064c03 (init)
 language='en'
 # 'en' 'jp' 'zh_CN'
 
