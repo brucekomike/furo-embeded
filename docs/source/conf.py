@@ -21,8 +21,13 @@ extensions = ["sphinx_inline_tabs",
 'sphinx_copybutton',
 'myst_parser',
 'sphinx.ext.githubpages',
+#'sphinx.ext.mathjax',
 ]
-myst_enable_extensions = [
+# uncomment the two lines to have latex support
+# js file should placed at _static
+# download from here: https://www.mathjax.org/#installnow
+#mathjax_path = 'tex-svg-full.js'
+myst_enable_extensions = [#
     "amsmath",
     "colon_fence",
     "deflist",
@@ -70,6 +75,7 @@ html_theme_options = {
 }
 highlight_language = 'text'
 #html_logo = '_static/logo.svg'
+#html_favicon = '_static/frameworker.svg'
 ogp_site_url = 'https://brucekomike.github.io/furo-embeded/'
 #ogp_image = '_static/logo.svg'
 #ogp_image_alt = 'site logo'

@@ -12,6 +12,11 @@ these files need to be changed as project basics
    5. language
    6. html_title
    7. html_theme_options
+   8. logo
+   9. optional math js（
+      1.  download from https://www.mathjax.org/#installnow
+      2.  place the tex-svg-full.js into `_static`
+      3.  un-comment the relative lines in `conf.py`.
 2. `_static/page.html` footer links
 
 
