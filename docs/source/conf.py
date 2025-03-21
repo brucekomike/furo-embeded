@@ -6,11 +6,13 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+## change required >>>
 project = 'template-intergrated'
 copyright = '2025, brucekomike'
 author = 'brucekomike'
-release = 'v0.2.0'
+release = 'v0.2.1'
 language='en'
+## change required <<<
 # 'en' 'jp' 'zh_CN'
 
 # -- General configuration ---------------------------------------------------
@@ -21,12 +23,16 @@ extensions = ["sphinx_inline_tabs",
 'sphinx_copybutton',
 'myst_parser',
 'sphinx.ext.githubpages',
+## change required >>>
 #'sphinx.ext.mathjax',
 ]
-# uncomment the two lines to have latex support
+#mathjax_path = 'tex-svg-full.js'
+## change required <<<
+
+# uncomment the two lines upon to have latex support
 # js file should placed at _static
 # download from here: https://www.mathjax.org/#installnow
-#mathjax_path = 'tex-svg-full.js'
+
 myst_enable_extensions = [#
     "amsmath",
     "colon_fence",
@@ -62,6 +68,7 @@ exclude_patterns = ['_build', 'build', 'Thumbs.db',
 
 html_theme = 'furo'
 html_static_path = ['_static']
+## change required >>>
 html_title = "furo template"
 html_last_updated_fmt = ''
 html_css_files = [
@@ -81,3 +88,4 @@ ogp_site_url = 'https://brucekomike.github.io/furo-embeded/'
 #ogp_image_alt = 'site logo'
 ogp_site_name = 'furo template'
 ogp_use_first_image = True
+## change required <<<
