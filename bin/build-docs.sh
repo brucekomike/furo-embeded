@@ -87,7 +87,7 @@ if [[ -z "$remote_host" ]]; then
 fi
 
 echo "Deploying to remote host: $remote_host"
-remote_base_dir="/opt/statics/docs" # Base directory on remote server
+remote_base_dir="/opt/www/statics/docs" # Base directory on remote server
 remote_archive_path="$remote_base_dir/$archive_filename"
 
 # Create target directory structure on the remote host
