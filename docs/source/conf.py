@@ -75,10 +75,14 @@ html_css_files = [
         "footer.css",
 ]
 html_theme_options = {
+    # github config here,
     "source_repository": "https://github.com/brucekomike/furo-embeded",
     "source_branch": "main",
     "source_directory": "docs/source/",
+    # key navigation
     "navigation_with_keys": True,
+    # gitlab config here,
+    #"source_view_link": "https://gitlab.change.this/OWNER/REPO/-/blob/main/docs/source/{filename}",
 }
 highlight_language = 'text'
 #html_logo = '_static/logo.svg'
