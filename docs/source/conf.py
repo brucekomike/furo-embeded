@@ -23,6 +23,7 @@ extensions = ["sphinx_inline_tabs",
 'sphinx_copybutton',
 'myst_parser',
 'sphinx.ext.githubpages',
+'sphinx_design'
 ## change required >>>
 #'sphinx.ext.mathjax',
 ]
