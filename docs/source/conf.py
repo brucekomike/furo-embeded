@@ -10,7 +10,7 @@
 project = 'template-intergrated'
 copyright = '2025, brucekomike'
 author = 'brucekomike'
-release = 'v0.2.1'
+release = 'v0.3.0'
 language='en'
 ## change required <<<
 # 'en' 'jp' 'zh_CN'
@@ -25,12 +25,13 @@ extensions = ["sphinx_inline_tabs",
 'sphinx.ext.githubpages',
 'sphinx_design'
 ## change required >>>
+#’sphinxcontrib-mermaid‘,
 #'sphinx.ext.mathjax',
 ]
 #mathjax_path = 'tex-svg-full.js'
 ## change required <<<
 
-# uncomment the two lines upon to have latex support
+# uncomment the two lines upon to have extendsions. 
 # js file should placed at _static
 # download from here: https://www.mathjax.org/#installnow
 

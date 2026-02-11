@@ -2,6 +2,6 @@
 
 ```{toctree}
 :hidden:
-test
-test2
+00
+10
 ```

@@ -3,7 +3,7 @@
 :maxdepth: 2
 :hidden:
 
-test
-test2
+00
+10
 subsection/index.md
 ```

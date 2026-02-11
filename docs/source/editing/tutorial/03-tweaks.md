@@ -20,11 +20,17 @@ these files need to be changed as project basics
 2. `_static/page.html` footer links
 
 
-## content creation
-this part of files are the content in this repo. most of them are sketch.
-1. `index.md`
-2. `README.md`
+## contents
 folders for sketch
 1. `manual`
-2. `tutorial` (you may just delete this)
-3. `reference`
+2. `reference`
+
+folder for editing reference
+- `editing`
+
+## add a new section
+a script to automate this:
+```sh
+./bin/new-section.sh <section name>
+```
+this script creates a subfolder in `docs/source`, then create a index and subpages from 00 to 05

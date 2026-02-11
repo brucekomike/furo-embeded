@@ -6,14 +6,17 @@ hide-toc: true
 :start-after: <!-- start elevator-pitch -->
 :end-before: <!-- end elevator-pitch -->
 ```
+
 ```{toctree}
-:caption: Getting Started
-tutorial/index
-```
-```{toctree}
-:caption: Development
+:caption: example section
 :hidden:
 :maxdepth: 2
 manual/index
 reference/index
 ```
+
+```{toctree}
+:caption: about
+:hidden:
+:maxdepth: 2
+editing/index
