@@ -18,10 +18,10 @@ FULL_URL="$GITLAB_URL$DOCS_APPENDIX"
 # Execute the download function
 curl -fsSL --header "PRIVATE-TOKEN: $TOKEN" $FULL_URL -o tmp.zip
 if [ -f "tmp.zip" ]; then
-  rm -rf html_docs.bak
-  mv html_docs html_docs.bak
+  rm -rf html-docs.bak
+  mv html-docs html-docs.bak
   unzip tmp.zip
 fi
-if [ -d "html_docs" ]; then
+if [ -d "html-docs" ]; then
     rm tmp.zip
 fi
