@@ -25,15 +25,16 @@ extensions = ["sphinx_inline_tabs",
 'sphinx.ext.githubpages',
 'sphinx_design'
 ## change required >>>
-#’sphinxcontrib-mermaid‘,
+#'sphinxcontrib.mermaid',
 #'sphinx.ext.mathjax',
 ]
-#mathjax_path = 'tex-svg-full.js'
+#mathjax_path = 'tex-svg.js'
 ## change required <<<
 
 # uncomment the two lines upon to have extendsions. 
 # js file should placed at _static
-# download from here: https://www.mathjax.org/#installnow
+# download from here:
+# https://github.com/mathjax/MathJax/archive/master.zip
 
 myst_enable_extensions = [#
     "amsmath",

@@ -36,15 +36,15 @@ static_dir_final_abs="$docs_dir_abs/$build_output_parent/$static_dir_name"
 # --- Pre-checks ---
 # Check if sphinx-build is installed
 if ! command -v sphinx-build &> /dev/null; then
-    echo "Error: sphinx-build could not be found."
-    echo "Hint: Have you activated the correct virtual environment?"
-    exit 1
+  echo "Error: sphinx-build could not be found."
+  echo "Hint: Have you activated the correct virtual environment?"
+  exit 1
 fi
 
 # Check if source docs directory exists
 if [[ ! -d "$docs_dir_abs" ]]; then
-    echo "Error: Docs source directory not found: $docs_dir_abs"
-    exit 1
+  echo "Error: Docs source directory not found: $docs_dir_abs"
+  exit 1
 fi
 
 # Create local archive directory if it doesn't exist
@@ -58,17 +58,22 @@ echo "Building documentation..."
 
 # Check if build output directory exists
 if [[ ! -d "$build_output_dir_abs" ]]; then
-    echo "Error: Expected build output directory not found after 'make html': $build_output_dir_abs"
-    exit 1
+  echo "Error: Expected build output directory not found after 'make html': $build_output_dir_abs"
+  exit 1
 fi
 
 # --- Rename and Archive ---
 echo "Renaming build output to '$static_dir_name'..."
 # Remove target dir if it exists before moving
-rm -rf "$static_dir_final_abs"
-mv "$build_output_dir_abs" "$static_dir_final_abs"
+if [[ "$static_dir_name" == "html" ]]; then
+  echo "Warning: Target static dir name is 'html', which is the same as the build output leaf. This will overwrite the build output. Proceeding with caution."
+else
+  rm -rf "$static_dir_final_abs"
+  mv "$build_output_dir_abs" "$static_dir_final_abs"
+fi
 
-timestamp=$(date +%Y%m%d%H%M%S)
+
+timestamp=$(date +%Y%m%d)
 archive_filename="html_docs_${static_dir_name}_${timestamp}.tar.gz"
 archive_path_abs="$archive_dir_abs/$archive_filename"
 
@@ -87,12 +92,13 @@ if [[ -z "$remote_host" ]]; then
 fi
 
 echo "Deploying to remote host: $remote_host"
-remote_base_dir="/opt/www/statics/docs" # Base directory on remote server
+remote_base_dir="/opt/www/docs/" # Base directory on remote server
 remote_archive_path="$remote_base_dir/$archive_filename"
 
 # Create target directory structure on the remote host
 echo "Creating remote directory (if needed): $remote_base_dir"
-ssh "$remote_host" "mkdir -p '$remote_base_dir'" # Quote the path
+ssh "$remote_host" -t "sudo mkdir -p '$remote_base_dir'" # Quote the path
+ssh "$remote_host" -t "sudo chown -R $USER:$USER '$remote_base_dir'"
 
 # Upload the archive to the remote host using rsync
 echo "Uploading archive..."
