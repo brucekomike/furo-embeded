@@ -9,7 +9,10 @@ NAME_SPACE="" # user name or group name
 PROJECT_NAME="" # project name
 BRANCH="main" #branch
 TOKEN=""  #your access token
-
+# use shared credits
+if [[ -f "../credit.sh" ]]; then
+  . ../credit.sh
+fi
 # Construct the full URL for downloading artifacts
 DOCS_APPENDIX="/api/v4/projects/$NAME_SPACE%2F$PROJECT_NAME\
 /jobs/artifacts/$BRANCH/download?job=$JOB_NAME"
