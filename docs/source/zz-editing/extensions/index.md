@@ -2,4 +2,5 @@
 ```{toctree}
 math
 mermaid
+graphviz
 ```

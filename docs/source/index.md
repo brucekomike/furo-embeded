@@ -11,12 +11,12 @@ hide-toc: true
 :caption: example section
 :hidden:
 :maxdepth: 2
-manual/index
-reference/index
+00-manual/index
+01-reference/index
 ```
 
 ```{toctree}
 :caption: about
 :hidden:
 :maxdepth: 2
-editing/index
+zz-editing/index

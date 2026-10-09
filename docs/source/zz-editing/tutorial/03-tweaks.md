@@ -34,3 +34,18 @@ a script to automate this:
 ./bin/new-section.sh <section name>
 ```
 this script creates a subfolder in `docs/source`, then create a index and subpages from 00 to 05
+
+## section file naming
+basic rules:
+- `index.md` is the section main page, keep it without number prefix.
+- non index files and dirs use `00-<name>` number prefix (`00-`, `01-`, ...).
+  the prefix keeps the folder at a fixed place, not affected by alphabet.
+- an optional main page link can be write in the toctree by:
+
+````
+```{toctree}
+self
+```
+````
+
+`self` is a special sphinx entry that stands for the page containing the toctree.
