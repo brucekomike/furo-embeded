@@ -1,8 +1,19 @@
 # tested in selfhosted gitlab runner (ubuntu 24.04 LXC in PVE)
 # apt update && apt upgrade
 # apt install build-essential python3-venv
+#
+# Pages is opt-in: set the CI/CD variable PAGES_DEPLOY to "true" to pull
+# .gitlab-page.yml into the pipeline. Note that this switch must be a
+# project/group/instance variable — include rules are evaluated before jobs, so
+# a `variables:` block in this file cannot reach them.
 stages:
   - build
+  - deploy
+
+include:
+  - local: '.gitlab-page.yml'
+    rules:
+      - if: $PAGES_DEPLOY == "true"
 
 build_docs:
   stage: build
